@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -28,9 +27,9 @@ import java.nio.charset.StandardCharsets;
 public class PrintBanner implements ApplicationListener<ApplicationReadyEvent> {
 
     public static final String[] BANNER = {"", " ____  ____  ____  ____ ", "(_  _)(  __)/ ___)(_  _)", "  )(   ) _) \\___ \\  )(", " (__) (____)(____/ (__) "};
+    private final String bannerName = " :: Test :: ";
     @Value("${test.version}")
     private String version;
-    private final String bannerName = " :: Test :: ";
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {

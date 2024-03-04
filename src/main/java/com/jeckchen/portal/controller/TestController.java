@@ -1,7 +1,6 @@
 package com.jeckchen.portal.controller;
 
 
-import com.jeckchen.portal.core.NoNeedLogin;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping("/hello")
     public String hello() {
-        System.out.println(1/0);
+        System.out.println(1 / 0);
         log.info("hello");
         return "hello";
     }
